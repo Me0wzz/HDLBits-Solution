@@ -9,4 +9,6 @@ module top_module(
     add16 add_2(a[31:16], b[31:16], 0, sum2, 0);
     add16 add_3(a[31:16], b[31:16], 1, sum3, 0);
     
+    assign sum[15:0] = sum1;
+    assign sum[31:16] = (add_1_cout) ? sum3 : sum2;
 endmodule
